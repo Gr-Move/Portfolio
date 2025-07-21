@@ -1,6 +1,0 @@
-json: {
-  "analysis": ["Jira", "BPMN"],
-  "integration": ["REST API", "Kafka"],
-  "data": ["PostgreSQL", "JSON"],
-  "docs": ["Markdown", "Swagger"]
-}
