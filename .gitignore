@@ -1,0 +1,26 @@
+### JetBrains IDE ###
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/**/*  # Рекурсивно игнорирует всё в .idea/
+
+### Python ###
+.venv/
+__pycache__/
+*.py[cod]
+*.py~
+*.pyo
+*.pyd
+
+### Пользовательские папки ###
+Cases/Case\ №\ 2/
+Cases/Case\ №\ 2/README.md
+
+### Системные файлы ###
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.cache
