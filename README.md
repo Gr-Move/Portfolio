@@ -8,6 +8,12 @@
 
 <br>
 
+<a href="https://gr-move.github.io/Portfolio/docs/after-index.html">Ссылка на after-index.html</a>
+<a href="https://gr-move.github.io/Portfolio/after-index.html">Ссылка на after-index.html без docs</a>
+<a href="https://gr-move.github.io/Portfolio/docs/after-index">Ссылка на after-index</a>
+<a href="https://gr-move.github.io/Portfolio/after-index">Ссылка на after-index без docs</a>
+
+
 ## 📂 Список кейсов
 
 | № | Название кейса                                             | Краткое описание                        | Стек технологий |
