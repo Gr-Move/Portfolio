@@ -1,5 +1,5 @@
-import glob
 import json
+import glob
 from tabulate import tabulate
 
 
@@ -24,58 +24,58 @@ def main():
 
     # Статичная часть (запишем это один раз в итоговый файл)
     header_content = """# 🛠 Технологический стек
+        
+        > ⚠️ **Этот файл автоматически обновляется. Ручные правки будут перезаписаны!**
+        
+        ## Общие принципы
+        - Используем только проверенные технологии
+        - Стек обновляется ежеквартально
+        - Критерии выбора: производительность, документация, сообщество
+        
+        ### Технологический стек (Тестовые данные):
+        - Нотации: BPMN 2.0, UML (Use Case, Sequence), C4 Model
+        - Документация: ГОСТ 34, Техническое задание, Архитектурное решение
+        - REST API: Swagger/OpenAPI, curl/requests тесты
+        - Язык: Markdown + HTML + CSS
+        
+        ## Автоматически генерируемые данные:\n\n"""
 
-> ⚠️ **Этот файл автоматически обновляется. Ручные правки будут перезаписаны!**
+    # Ищем файл TechStack.json в папке Portfolio/Cases/**/
+    file_paths = glob.glob('Cases/**/TechStack.json')
 
-## Общие принципы
-- Используем только проверенные технологии
-- Стек обновляется ежеквартально
-- Критерии выбора: производительность, документация, сообщество
+    if not file_paths:
+        print("Файл TechStack.json не найден.")
+        return
 
-### Технологический стек (Тестовые данные):
-- Нотации: BPMN 2.0, UML (Use Case, Sequence), C4 Model
-- Документация: ГОСТ 34, Техническое задание, Архитектурное решение
-- REST API: Swagger/OpenAPI, curl/requests тесты
-- Язык: Markdown + HTML + CSS
+    # Читаем данные из первого найденного файла TechStack.json
+    try:
+        with open(file_paths[0], 'r', encoding='utf-8') as f:
+            case_data = json.load(f)
+    except FileNotFoundError:
+        print("Файл TechStack.json не найден.")
+        return
+    except json.JSONDecodeError as e:
+        print(f"Ошибка при парсинге JSON: {e}")
+        return
 
-## Автоматически генерируемые данные:\n\n"""
+    # Формируем таблицу данных
+    row = {
+        'Кейс': 'TechStack',
+        'Анализ': ', '.join(case_data.get('analysis', [])),
+        'Интеграции': ', '.join(case_data.get('integration', [])),
+        'Данные': ', '.join(case_data.get('data', [])),
+        'Документирование': ', '.join(case_data.get('docs', []))
+    }
+    table_data.append(row)
 
-    # Поиск всех файлов _techstack.md в подпапках Cases
-    for file in glob.glob("/Cases/**/_techstack.md", recursive=True):
-        with open(file, encoding="utf-8") as f:
-            content = f.read()
-            # Предполагаем, что JSON начинается с "json: "
-            try:
-                raw_content = content.split('json: ')[1].strip()
-                case_data = json.loads(raw_content)
-            except (IndexError, json.JSONDecodeError):
-                print(f"Ошибка при обработке файла: {file}")
-                continue
+    for category in tech_data['categories']:
+        tools = case_data.get(category.lower(), [])
+        tech_data['categories'][category].extend(tools)
 
-
-            # Формирование строки для таблицы
-            print({file.split('/')[-2]}, {file.replace('_techstack.md', '')})
-            row = {
-                'Кейс': f"[{file.split('/')[-2]}]({file.replace('_techstack.md', '')})",
-                'Анализ': ', '.join(case_data.get('analysis', [])),
-                'Интеграции': ', '.join(case_data.get('integration', [])),
-                'Данные': ', '.join(case_data.get('data', [])),
-                'Документирование': ', '.join(case_data.get('docs', []))
-            }
-            table_data.append(row)
-            print(table_data)
-
-
-            # Агрегация данных для диаграммы
-            for category in tech_data['categories']:
-                tech_data['categories'][category].extend(case_data.get(category.lower(), []))
-
-    # Генерация итогового файла
     with open("techstack.md", "w", encoding="utf-8") as f:
         f.write(header_content)
         f.write(tabulate(table_data, headers="keys", tablefmt="github"))
         f.write("\n\n" + generate_mermaid_chart(tech_data))
-
 
 if __name__ == "__main__":
     main()
