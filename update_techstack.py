@@ -44,7 +44,7 @@ def main():
     table_data = []
 
     # Шаг 1: Поиск всех файлов _techstack.md в подпапках Cases
-    for file in glob.glob("Cases/**/_techstack.md", recursive=True):
+    for file in glob.glob("Portfolio/Cases/**/_techstack.md", recursive=True):
         with open(file) as f:
             # Шаг 2: Извлечение JSON-данных из файла
             raw_content = f.read().split('```json')[1].split('```')[0].strip()
