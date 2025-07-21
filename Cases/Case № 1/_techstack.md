@@ -4,14 +4,6 @@
 <!-- "docs": ["Документирование"],                  -->
 
 
-```json
-{
-  "analysis": ["Jira", "BPMN"],
-  "integration": ["REST API", "Kafka"],
-  "data": ["PostgreSQL", "JSON"],
-  "docs": ["Markdown", "Swagger"]
-}
-```
 
 ## Содержание проекта
 
@@ -31,15 +23,17 @@
 
 
 ## Общий стек
-```mermaid
-pie
-    title Распределение технологий
-    "Анализ" : 35
-    "Интеграции" : 40
-    "Данные" : 15
-    "Документирование" : 10
+```json
+{
+  "analysis": ["Jira", "BPMN"],
+  "integration": ["REST API", "Kafka"],
+  "data": ["PostgreSQL", "JSON"],
+  "docs": ["Markdown", "Swagger"]
+}
+```
 
-
+<br><br><br><br><br><br><br><br><br><br>
+### Тестовые данные:
 
 <style>
 .justify {
@@ -50,3 +44,10 @@ pie
   color: #333;
 }
 </style>
+
+## Кейс 1
+```mermaid
+graph TD
+    A[BPMN] --> B[Jira]
+    A --> C[REST API]
+    C --> D[Swagger]

@@ -1,33 +1,38 @@
-name: Update Tech Stack
+name: Update Tech Stack  # Название workflow (отображается в интерфейсе GitHub Actions)
 on:
   push:
     paths:
-      - 'Cases/**/_techstack.md'
-    branches: [ main ]
+      - 'Cases/**/_techstack.md'  # Триггер: запуск только при изменении этих файлов
+    branches: [ main ]  # Только для ветки main
 
 jobs:
-  update_techstack:
-    runs-on: ubuntu-latest
-    
+  update_techstack:  # ID задачи
+    runs-on: ubuntu-latest  # Используем свежий Ubuntu для выполнения
+
     steps:
+    # Шаг 1: Получаем код из репозитория
     - name: Checkout code
-      uses: actions/checkout@v4
-      
+      uses: actions/checkout@v4  # Официальное действие для клонирования репозитория
+
+    # Шаг 2: Устанавливаем Python
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
-        
+        python-version: '3.10'  # Конкретная версия Python
+
+    # Шаг 3: Устанавливаем зависимости Python
     - name: Install dependencies
-      run: pip install tabulate mermaid-markdown
-        
+      run: pip install tabulate mermaid-markdown  # Пакеты для работы скрипта
+
+    # Шаг 4: Запускаем наш скрипт
     - name: Run update script
       run: |
-        python update_techstack.py
-        cat techstack.md
-        
+        python update_techstack.py  # Основной скрипт
+        cat techstack.md  # Вывод результата (для логов)
+
+    # Шаг 5: Автоматически коммитим изменения
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: 'Auto-update tech stack'
-        file_pattern: techstack.md
+        commit_message: 'Auto-update tech stack'  # Сообщение коммита
+        file_pattern: techstack.md  # Коммитим только этот файлФ
