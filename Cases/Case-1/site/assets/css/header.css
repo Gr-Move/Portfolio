@@ -1,0 +1,17 @@
+header {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--text-light);
+  padding: var(--space-md) 0;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
