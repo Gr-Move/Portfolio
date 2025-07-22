@@ -1,3 +1,5 @@
+name: Update Tech Stack  # Название workflow (отображается в интерфейсе GitHub Actions)
+
 on:
   workflow_dispatch:  # ! Добавьте эту строку для ручного запуска
   push:
