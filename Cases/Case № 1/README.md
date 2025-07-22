@@ -11,7 +11,7 @@
 
 ## Содержание проекта
 
-1. [Выявление требований](https://gr-move.github.io/Portfolio/Cases/Case%20№%201/Identification-of-requirements)  |  [Выявление требований](https://gr-move.github.io/Portfolio/Cases/Case%20№%201/ior)
+1. [Выявление требований](Identification-of-requirements.md)  |  [Выявление требований](https://gr-move.github.io/Portfolio/Cases/Case%20№%201/ior)
 2. [Визуализация кнопки](https://gr-move.github.io/Portfolio/Cases/Case%20№%201/)
 2. [Документация](https://gr-move.github.io/Portfolio/Cases/Case%20№%201/)
 2. [Визуализация](https://gr-move.github.io/Portfolio/Cases/Case%20№%201/)
