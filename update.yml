@@ -26,7 +26,7 @@ jobs:
 
     # Шаг 3: Устанавливаем зависимости Python
     - name: Install dependencies
-      run: pip install tabulate mermaid-markdown  # Пакеты для работы скрипта
+      run: pip install tabulate  # Пакеты для работы скрипта
 
     # Шаг 4: Запускаем наш скрипт
     - name: Run update script
