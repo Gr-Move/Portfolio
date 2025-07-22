@@ -19,6 +19,9 @@
 4. [Реализация задачи](https://gr-move.github.io/Portfolio/docs/after-index.html)
 4. [Используемые технологии](https://gr-move.github.io/Portfolio/Cases/Case-1/TechStack.json)
 
+[![Спросить агронома](https://img.shields.io/badge/Спросить_агронома-008CBA?style=for-the-badge&logo=appveyor)](mailto:agronom@example.com)
+
+
 
 graph TD
     A[BPMN] --> B[Jira]
