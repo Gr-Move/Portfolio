@@ -27,3 +27,17 @@ jobs:
     # Шаг 3: Устанавливаем зависимости Python
     - name: Install dependencies
       run: pip install tabulate  # Пакеты для работы скрипта
+
+    # Шаг 4: Запускаем наш скрипт
+    - name: Run update script
+      run: |
+        python update_techstack.py
+        cat techstack.md
+
+    # Шаг 5: Автоматически коммитим изменения
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: 'Auto-update tech stack'  # Сообщение коммита
+        file_pattern: techstack.md  # Коммитим только этот файл
+        branch: master

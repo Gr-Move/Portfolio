@@ -29,8 +29,6 @@ jobs:
       run: pip install tabulate mermaid-markdown  # Пакеты для работы скрипта
 
     # Шаг 4: Запускаем наш скрипт
-    # python update_techstack.py - Основной скрипт
-    # cat techstack.md - Вывод результата (для логов)
     - name: Run update script
       run: |
         python update_techstack.py
