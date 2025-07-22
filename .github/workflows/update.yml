@@ -4,3 +4,16 @@ on:
     paths:
       - 'Portfolio/Cases/**/TechStack.json'
     branches: [ master ]
+
+jobs:
+  update_techstack:  # ID задачи
+    runs-on: ubuntu-latest  # Используем свежий Ubuntu для выполнения
+    permissions:
+      contents: write  # Необходимо для автокоммита
+
+    steps:
+    # Шаг 1: Получаем код из репозитория
+    - name: Checkout code
+      uses: actions/checkout@v4  # Официальное действие для клонирования репозитория
+      with:
+        fetch-depth: 0  # Полная история коммитов (подсветка — ложное предупреждение!)
