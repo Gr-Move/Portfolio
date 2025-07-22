@@ -1,0 +1,10 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+main {
+  padding: 40px 0;
+  min-height: 70vh; /* Чтобы футер был прижат к низу */
+}

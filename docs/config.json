@@ -1,0 +1,7 @@
+{
+  "components": {
+    "header": true,
+    "footer": true,
+    "button": true
+  }
+}
