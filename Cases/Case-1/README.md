@@ -11,19 +11,39 @@
 
 ## Содержание проекта
 
-1. [Выявление требований](identification-of-requirements.md)
-2. [Визуализация кнопки](https://gr-move.github.io/Portfolio/Cases/Case-1/)
+1. [Вопросы для выявления требований](identification-of-requirements.md)
+2. [User Story от пользователей](identification-of-requirements.md##User-Story)
+3. Вместо классических диаграмм:
+   + [Схема расположения Wireframe](###Схема расположения Wireframe)
+   + [Эскиз интерфейса (Набросок UI или mockup)](###Визуализация-кнопки)
+
 2. [Документация](https://gr-move.github.io/Portfolio/Cases/Case-1/)
-2. [Визуализация](https://gr-move.github.io/Portfolio/Cases/Case-1/)
 3. [Примеры взаимодействия с БД](https://gr-move.github.io/Portfolio/Cases/Case-1/)
-4. [Реализация задачи](https://gr-move.github.io/Portfolio/docs/after-index.html)
+4. ~~[Реализация задачи | Вывод в продуктовую среду]~~
 4. [Используемые технологии](https://gr-move.github.io/Portfolio/Cases/Case-1/TechStack.json)
 
-[![Спросить агронома](https://img.shields.io/badge/Спросить_агронома-008CBA?style=for-the-badge&logo=appveyor)](mailto:agronom@example.com)
+<br><br>
 
+---
 
+## Контент
 
-graph TD
+### Схема расположения Wireframe
+
+![wireframe.png](wireframe.png)
+
+### Визуализация кнопки
+
+<style>
+/* Стили кнопки */
+.iksweb{display: inline-block;cursor: pointer; font-size:14px;text-decoration:none;padding:13px 15px; color:#383838;background:#cf88db;border-radius:12px;border:2px solid #354251;}
+.iksweb:hover{background:#354251;color:#ffffff;border:2px solid #354251;transition: all 0.6s ease;}
+</style>
+
+<a class="iksweb" href="https://iksweb.ru/tools/cnopka/" title="Нажми на меня">Нажми на меня</a>
+
+'''graph TD
     A[BPMN] --> B[Jira]
     A --> C[REST API]
     C --> D[Swagger]
+'''
