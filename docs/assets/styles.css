@@ -1,0 +1,15 @@
+header {
+    background: #ff69b4; /* Розовый цвет */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background: #ff69b4; /* Розовый цвет подвала */
+}

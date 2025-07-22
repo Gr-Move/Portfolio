@@ -1,0 +1,52 @@
+body.dark-theme {
+    background-color: #121212; /* Темный фон */
+    color: #E0E0E0; /* Светлый текст */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #FF4081; /* Розовый цвет для заголовков */
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #FF4081;
+    padding-bottom: 10px;
+}
+
+.analytics-questions, .description {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #1E1E1E; /* Темный фон для секции */
+    border-radius: 8px;
+}
+
+.question-list, .description-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+.question-list li {
+    margin-bottom: 20px;
+}
+
+.question-list p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.question-list a {
+    color: #FF4081; /* Розовая ссылка */
+    text-decoration: none;
+}
+
+.question-list a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.description-list li {
+    margin-bottom: 10px;
+}
