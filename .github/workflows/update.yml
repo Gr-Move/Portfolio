@@ -8,11 +8,15 @@ on:
 jobs:
   update_techstack:  # ID задачи
     runs-on: ubuntu-latest  # Используем свежий Ubuntu для выполнения
+    permissions:
+      contents: write  # Необходимо для автокоммита
 
     steps:
     # Шаг 1: Получаем код из репозитория
     - name: Checkout code
       uses: actions/checkout@v4  # Официальное действие для клонирования репозитория
+      with:
+        fetch-depth: 0  # Полная история коммитов (подсветка — ложное предупреждение!)
 
     # Шаг 2: Устанавливаем Python
     - name: Set up Python
@@ -36,3 +40,4 @@ jobs:
       with:
         commit_message: 'Auto-update tech stack'  # Сообщение коммита
         file_pattern: techstack.md  # Коммитим только этот файл
+        branch: master
