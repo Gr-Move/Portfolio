@@ -1,6 +1,6 @@
 {
-  "analysis": ["Jira", "BPMN"],
-  "integration": ["REST API", "Kafka"],
+  "analysis": ["FlowChart", "UserFlow", "UX/UI"],
+  "integration": [],
   "data": ["JSON"],
-  "docs": ["Markdown", "Swagger"]
+  "docs": ["MarkDown"]
 }

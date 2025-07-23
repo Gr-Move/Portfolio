@@ -15,8 +15,11 @@ __pycache__/
 *.pyd
 
 ### Пользовательские папки ###
-Cases/Case\ №\ 2/
-Cases/Case\ №\ 2/README.md
+Cases/Case-3/
+Cases/Case-4/
+Cases/Case-5/
+Cases/Case-6/
+Cases/Case-7/
 
 ### Системные файлы ###
 .DS_Store
