@@ -11,14 +11,14 @@
 
 ## Содержание проекта
 
-1. [Выявления требований](Portfolio/Cases/Case-1/IdentificationOfRequirements.md)
-2. [User Story от пользователей](Portfolio/Cases/Case-1/IdentificationOfRequirements.md##User-Story)
-3. Диаграммы [User Flow](FlowChart.md) + User Flow Diagram + C4
+1. [Выявления требований](/IdentificationOfRequirements.md)
+2. [User Story от пользователей](/IdentificationOfRequirements.md##User-Story)
+3. Диаграммы [User Flow](/FlowChart.md) + User Flow Diagram + C4
 4. Вместо классических диаграмм:
-   + [Схема расположения Wireframe](Portfolio/Cases/Case-1/README.md###Схема-расположения-Wireframe)
-   + [Эскиз интерфейса (Набросок UI или mockup)](Portfolio/Cases/Case-1/README.md###Визуализация-кнопки)
+   + [Схема расположения Wireframe](/README.md###Схема-расположения-Wireframe)
+   + [Эскиз интерфейса (Набросок UI или mockup)](/README.md###Визуализация-кнопки)
 5. Обновление документации
-6. [Используемые технологии](https://gr-move.github.io/Portfolio/Cases/Case-1/TechStack.json)
+6. [Используемые технологии](/TechStack.json)
 
 <br><br>
 
@@ -32,7 +32,7 @@
 
 ### Визуализация кнопки
 
-'''HTML/CSS
+'''HTML
 <style>
 /* Стили кнопки */
 .iksweb{display: inline-block;cursor: pointer; font-size:14px;text-decoration:none;padding:13px 15px; color:#383838;background:#cf88db;border-radius:12px;border:2px solid #354251;}
