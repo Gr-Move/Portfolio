@@ -15,35 +15,24 @@
 2. [User Story от пользователей](flow-chart.md)
 3. Диаграммы [Flow Chart](flow-chart.md) + User Flow Diagram + C4
 4. Вместо классических диаграмм:
-   + [Схема расположения Wireframe](README.md###Схема-расположения-Wireframe)
-   + [Эскиз интерфейса (Набросок UI или mockup)](README.md###Визуализация-кнопки)
+   + [Схема расположения Wireframe](wire-frame.png)
+   + [Эскиз интерфейса (Набросок UI или mockup)](https://iksweb.ru/tools/cnopka/)
 5. Обновление документации
 6. [Используемые технологии](TechStack.json)
 
-<br><br>
+
 
 ---
 
-## Контент
-
-### Схема расположения Wireframe
-
-![wire-frame.png](wire-frame.png)
-
-### Визуализация кнопки
-
-'''HTML
-<style>
-/* Стили кнопки */
-.iksweb{display: inline-block;cursor: pointer; font-size:14px;text-decoration:none;padding:13px 15px; color:#383838;background:#cf88db;border-radius:12px;border:2px solid #354251;}
-.iksweb:hover{background:#354251;color:#ffffff;border:2px solid #354251;transition: all 0.6s ease;}
-</style>
-
-<a class="iksweb" href="https://iksweb.ru/tools/cnopka/" title="Нажми на меня">Нажми на меня</a>
-'''
-
-
-graph TD
-    A[BPMN] --> B[Jira]
-    A --> C[REST API]
-    C --> D[Swagger]
+```mermaid
+graph TD;
+    A[Начало] --> B[Получение требований];
+    B --> C[Документирование требований];
+    C --> D[Дизайн кнопки];
+    D --> E[Разработка];
+    E --> F[Обновление документации];
+    F --> G[Тестирование];
+    G --> H[Обратная связь];
+    H --> I[Развертывание];
+    I --> J[Мониторинг];
+    J --> K[Конец];
