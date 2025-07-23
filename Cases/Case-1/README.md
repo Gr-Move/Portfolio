@@ -12,8 +12,8 @@
 ## Содержание проекта
 
 1. [Выявления требований](identification-of-requirements.md)
-2. [User Story от пользователей](flow-chart.md##User-Story)
-3. Диаграммы [User Flow](flow-chart.md) + User Flow Diagram + C4
+2. [User Story от пользователей](flow-chart.md)
+3. Диаграммы [Flow Chart](flow-chart.md) + User Flow Diagram + C4
 4. Вместо классических диаграмм:
    + [Схема расположения Wireframe](README.md###Схема-расположения-Wireframe)
    + [Эскиз интерфейса (Набросок UI или mockup)](README.md###Визуализация-кнопки)
