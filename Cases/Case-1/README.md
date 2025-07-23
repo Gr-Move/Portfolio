@@ -11,16 +11,14 @@
 
 ## Содержание проекта
 
-1. [Вопросы для выявления требований](identification-of-requirements.md)
-2. [User Story от пользователей](identification-of-requirements.md##User-Story)
-3. Вместо классических диаграмм:
-   + [Схема расположения Wireframe](###Схема расположения Wireframe)
-   + [Эскиз интерфейса (Набросок UI или mockup)](###Визуализация-кнопки)
-
-2. [Документация](https://gr-move.github.io/Portfolio/Cases/Case-1/)
-3. [Примеры взаимодействия с БД](https://gr-move.github.io/Portfolio/Cases/Case-1/)
-4. ~~[Реализация задачи | Вывод в продуктовую среду]~~
-4. [Используемые технологии](https://gr-move.github.io/Portfolio/Cases/Case-1/TechStack.json)
+1. [Выявления требований](Portfolio/Cases/Case-1/IdentificationOfRequirements.md)
+2. [User Story от пользователей](Portfolio/Cases/Case-1/IdentificationOfRequirements.md##User-Story)
+3. Диаграммы [User Flow](FlowChart.md) + User Flow Diagram + C4
+4. Вместо классических диаграмм:
+   + [Схема расположения Wireframe](Portfolio/Cases/Case-1/README.md###Схема-расположения-Wireframe)
+   + [Эскиз интерфейса (Набросок UI или mockup)](Portfolio/Cases/Case-1/README.md###Визуализация-кнопки)
+5. Обновление документации
+6. [Используемые технологии](https://gr-move.github.io/Portfolio/Cases/Case-1/TechStack.json)
 
 <br><br>
 
@@ -34,6 +32,7 @@
 
 ### Визуализация кнопки
 
+'''HTML/CSS
 <style>
 /* Стили кнопки */
 .iksweb{display: inline-block;cursor: pointer; font-size:14px;text-decoration:none;padding:13px 15px; color:#383838;background:#cf88db;border-radius:12px;border:2px solid #354251;}
@@ -41,9 +40,10 @@
 </style>
 
 <a class="iksweb" href="https://iksweb.ru/tools/cnopka/" title="Нажми на меня">Нажми на меня</a>
+'''
 
-'''graph TD
+
+graph TD
     A[BPMN] --> B[Jira]
     A --> C[REST API]
     C --> D[Swagger]
-'''
