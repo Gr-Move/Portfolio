@@ -6,8 +6,8 @@
 
 ```mermaid
 graph TD;
-    A[шарик 1] --> B[шарик 2]
-    B --> C[шарик 3]
+    A((шарик 1)) --> B((шарик 2))
+    B --> C(шарик 3)
     style A fill: red
     style B fill: green
     style C fill: blue
