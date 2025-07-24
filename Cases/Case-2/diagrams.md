@@ -30,8 +30,28 @@ sequenceDiagram;
      - Ожидание данных от "ВетАИС"
      - Подтвержденный билет и т.п.
 
+
 ```mermaid
-stateDiagram;
+  info
+```
+
+
+---
+title: Simple sample
+---
+```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+
+```mermaid
+stateDiagram-v2;
     Новая_заявка: Инициировать оформление
     Данные_о_животном_собраны: Собраны данные
     Ожидание_ответа_от_ВетАИС: Ожидание ответа от ВетАИС
