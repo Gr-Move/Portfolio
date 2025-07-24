@@ -6,8 +6,8 @@
 ```mermaid
 sequenceDiagram;
     participant User as Пользователь
-    participant Internal as Внутренняя система
     participant YB as Яндекс Билеты
+    participant Internal as Внутренняя система
     participant VetAIS as ВетАИС
 
     User->>YB: Запрос данных о транспорте из справочника
