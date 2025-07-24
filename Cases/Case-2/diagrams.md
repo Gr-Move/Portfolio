@@ -7,19 +7,20 @@
 sequenceDiagram;
     participant User as Пользователь
     participant YB as Яндекс Билеты
-    participant Internal as Внутренняя система
+    participant Internal as Внутренняя транспортная система
     participant VetAIS as ВетАИС
 
     User->>YB: Запрос данных о транспорте из справочника
     YB->>Internal: Запрос данных о транспорте из справочника
     Internal->>YB: Ответ от справочника
     YB->>User: Ответ от справочника
-    User->>Internal:  Запрос на оформление билета и передача данных о животном
+    User->>YB:  Запрос на оформление билета для животного
+    YB->>Internal:  Передача данных о животном
     Internal->>VetAIS: Запрос информации о животном
     VetAIS-->>Internal: Ответ с медицинской информацией
     Internal->>YB: Запрос на оформление билета
     YB-->>Internal: Ответ с номером и деталями билета
-    Internal->>User: Подтверждение оформления билета
+    YB->>User: Подтверждение оформления билета для животного
 ```
 
 2. Диаграмма состояний (State Diagram):
